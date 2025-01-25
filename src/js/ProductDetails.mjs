@@ -1,7 +1,7 @@
-import { setLocalStorage } from "./utils.mjs";
+import { setLocalStorage, getLocalStorage } from "./utils.mjs";
 
 // Generates the HTML structure for the product details dynamically. Takes product data and converts it into HTML to display on the page.
-function renderProductTemplate(product) {
+function productDetailsTemplate(product) {
     return `<section class="product-detail"> <h3>${product.Brand.Name}</h3>
       <h2 class="divider">${product.NameWithoutBrand}</h2>
       <img
@@ -35,8 +35,13 @@ export default class ProductDetails{
     }
     
     addToCart() {
-        setLocalStorage("so-cart", this.product);
-    }
+        let cartContents = getLocalStorage("so-cart");
+        if (!cartContents) {
+          cartContents = [];
+        }
+        cartContents.push(this.product);
+        setLocalStorage("so-cart", cartContents);
+      }
 
     renderProductDetails(selector) {
         const element = document.querySelector(selector);
