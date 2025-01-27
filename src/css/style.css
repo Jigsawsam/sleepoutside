@@ -220,3 +220,21 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+
+.cart-count {
+  position: absolute;
+  top: 5px;
+  right: -10px;
+  background-color: rgb(210, 152, 121);
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
