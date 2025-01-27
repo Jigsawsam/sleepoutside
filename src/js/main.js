@@ -1,4 +1,5 @@
 import { loadHeaderFooter } from "./utils.mjs";
+import { updateCartCount } from "./cartCount.mjs";
 import ProductData from './ProductData.mjs';
 import ProductList from "./ProductList.mjs";
 
@@ -11,5 +12,12 @@ const listElement = document.querySelector('.product-list');
 const dataSource = new ProductData("tents");
 const listing = new ProductList('tents', dataSource, listElement);
 
+async function initPage() {
+    await loadHeaderFooter(); 
+    updateCartCount(); 
+  }
+
 // initialize product listing
 listing.init();
+
+initPage();

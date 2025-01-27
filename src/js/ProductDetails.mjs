@@ -1,4 +1,5 @@
 import { setLocalStorage, getLocalStorage } from "./utils.mjs";
+import { updateCartCount } from "./cartCount.mjs";
 
 // Generates the HTML structure for the product details dynamically. Takes product data and converts it into HTML to display on the page.
 function productDetailsTemplate(product) {
@@ -41,6 +42,8 @@ export default class ProductDetails{
         }
         cartContents.push(this.product);
         setLocalStorage("so-cart", cartContents);
+        // update the cart count in the header dynamically.
+        updateCartCount();
       }
 
     renderProductDetails(selector) {
