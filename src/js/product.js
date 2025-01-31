@@ -4,8 +4,8 @@ import ProductDetails from './ProductDetails.mjs';
 import { updateCartCount } from "./cartCount.mjs";
 
 async function initPage() {
-  await loadHeaderFooter(); // Load the header and footer
-  updateCartCount(); // Update the cart count after header is loaded
+  await loadHeaderFooter(); 
+  updateCartCount(); 
 
   const productId = getParam('product');
   const dataSource = new ProductData('tents');
@@ -14,4 +14,4 @@ async function initPage() {
   product.init(); // Initialize the product details
 }
 
-initPage();
+initPage(); 

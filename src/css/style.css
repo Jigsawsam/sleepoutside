@@ -238,3 +238,37 @@ footer {
   font-weight: bold;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
+.grid-product {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  color: var(--dark-grey);
+  padding-left: 0;
+}
+
+.grid-product > li {
+  width: 150px;
+  padding: 0.5em;
+  margin: 1em;
+}
+.grid-product h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+.grid-product a {
+  text-decoration: none;
+}
+.grid-product a:link,
+.grid-product a:visited {
+  color: var(--dark-grey);
+}
+.grid-product a:hover {
+  text-decoration: underline;
+}
+
+.title {
+  text-transform: capitalize;
+}
