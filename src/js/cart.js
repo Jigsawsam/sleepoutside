@@ -3,7 +3,7 @@ import { updateCartCount } from "./cartCount.mjs";
 import ShoppingCart from "./ShoppingCart.mjs";
 
 async function initPage() {
-    await loadHeaderFooter(); // Ensure the header/footer are loaded first
+    await loadHeaderFooter(); // ensure header/footer are loaded first
     updateCartCount(); // Update the cart count in the header
     
     // Render the cart contents
