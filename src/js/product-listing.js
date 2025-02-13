@@ -14,7 +14,8 @@ const dataSource = new ProductData();
 const listElement = document.querySelector('.product-list');
 const listing = new ProductList(category, dataSource, listElement);
 
-// initialize product listing
+
+// initialize products listing
 listing.init();
 
 initPage();
