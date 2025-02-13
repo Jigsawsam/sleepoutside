@@ -202,6 +202,15 @@ button {
   grid-column: 3;
 }
 
+.discount-flag {
+  padding: 20px;
+  border: 1px solid grey;
+  color: white;
+  border-radius: 5px;
+  background-color: blue;
+  float: right;
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
