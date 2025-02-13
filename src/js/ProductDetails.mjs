@@ -13,6 +13,7 @@ function productDetailsTemplate(product) {
         border-radius: 5px;
         background-color: blue;
         float: right;">Discount -${product.Discount}%</p>
+        
       <img
         class="divider"
         src="${product.Image}"
