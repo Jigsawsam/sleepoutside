@@ -51,7 +51,11 @@ export async function loadHeaderFooter() {
 
   renderWithTemplate(headerTemplate, headerElement);
   renderWithTemplate(footerTemplate, footerElement);
+
+  
 }
+
+
 
 // set a listener for both touchend and click
 export function setClick(selector, callback) {
