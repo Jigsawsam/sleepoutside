@@ -44,6 +44,7 @@ export default class ProductDetails {
     // Without .bind(this), 'this' in the event handler would refer to the button element. .bind(this) ensures 'this' refers to the ProductDetails instance.
   }
 
+  
   addToCart() {
     let cartContents = [];
 
