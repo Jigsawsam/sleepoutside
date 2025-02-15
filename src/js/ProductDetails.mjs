@@ -45,11 +45,20 @@ export default class ProductDetails {
   }
 
   addToCart() {
-    let cartContents = getLocalStorage("so-cart");
-    if (!cartContents) {
-      cartContents = [];
+    let cartContents = [];
+
+    let cartContentItem = getLocalStorage("so-cart");
+    // console.log(cartContentItem);
+    
+    if (cartContentItem && !!cartContentItem[0] == false) {
+      // cartContents = [];
+      cartContents.push(cartContentItem);
+    } else if (cartContentItem && !!cartContentItem[0] == true) {
+      cartContents = cartContentItem;
     }
     cartContents.push(this.product);
+
+    console.log(cartContents);
     setLocalStorage("so-cart", cartContents);
     // update the cart count in the header dynamically.
     updateCartCount();
